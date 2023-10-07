@@ -6,14 +6,31 @@
     <title>Tabelas</title>
 </head>
 <style>
+
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
     body {
-        background-color: rgb(122, 253, 0);
+        background-color: white;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     table {
         margin: auto;
         width: 500px;
         border-collapse: collapse;
+    }
+
+    caption {
+        font-size: 1.3em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgrey;
+    }
+
+    tbody > tr:nth-child(odd) {
+        background-color: lightgray;
     }
 
     thead {
@@ -35,12 +52,24 @@
     }
 
     h1,h2, p {
+        padding: 10px   ;
         text-align: center;
     }
+
+    header {
+        min-height: 130px;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: green;
+    }
+
 </style>
 <body>
-    <h1>Uso de tabelas Grandes</h1>
-    <h2>Tabelas da população dos estados do Brasil</h2>
+    <header>
+        <h1>Uso de tabelas Grandes</h1>
+        <h2>Tabelas da população dos estados do Brasil</h2>
+    </header>
+
     <p>Dados da tabela retirado do site wikipedia.<br>
     <a href="https://pt.wikipedia.org/wiki/Lista_de_unidades_
        federativas_do_Brasil_por_popula%C3%A7%C3%A3o">LINK DAS INFORMAÇÕES DA TABELA
@@ -49,6 +78,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION ==> LEGENDA (FICA SEMPRE NO TOPO DA TABELA AUTOMATICAMENTE)
             THEADE ==> CABEÇA DA TABELA
                 TR, TD, TH
             TBODY ==> CORPO DA TABELA
@@ -57,11 +87,12 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das unidades Federativas.</caption>
         <thead>
             <tr>
-                <th>Posição</th>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col" style="width: 30px;">Posição</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tbody>
